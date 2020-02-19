@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+  box-sizing: border-box;
+}
+
+
+ 
+        .container{
+         background:linear-gradient(45deg,blue,red);
+           border:2px double;
+           width:100%;
+           height:100%;
+        margin-top: 0;
+        padding-top: 0;
+        }
+        
+       .head{
+        background-image: url("nature.jpg" ) ; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        width: 100%;
+        height: 600px;
+        font-size: x-large;
+        margin-top: 
+    
+        padding-top: 0;
+       } 
+       
+    
+       .nav ul{
+   margin:20px 0 0;
+   padding:  0;
+   border-radius: 4px;
+   background: #262626;
+   overflow:hidden;
+  }
+  nav ul li{
+      list-style-type:none ;
+      display: inline-block;
+  }
+  nav ul li a{
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+  }
+
+  .column {
+  float: left;
+  padding: 10px;
+}
+
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+
+    .box-area{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+    }
+     .box-area li{
+         position: absolute;
+         display: block;
+         list-style: none;
+         height: 25px;
+         width:25px;
+         background:rgba(255, 255, 255, 0.2);
+         animation: motion 10s  linear infinite;
+         bottom: -200px;
+     }
+     .box-area li:nth-child(1){
+        left: 86%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0;
+    }
+    .box-area li:nth-child(2){
+        left: 12%;
+        width: 30px;
+        height: 30px;
+        animation-delay: 1.5s;
+        animation-duration: 5s;
+    }
+
+    .box-area li:nth-child(3){
+        left: 70%;
+        width: 100px;
+        height: 100px;
+        animation-delay: 5.5s;
+        animation-duration: 5s;
+    }
+    .box-area li:nth-child(4){
+        left: 40%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 1.5s;
+      
+    }
+    .box-area li:nth-child(5){
+        left: 20%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3.5s;
+        animation-duration: 5s;
+    }
+
+@keyframes motion{
+    from{transform: translateY(0)  rotateX(0)  rotateZ(0) rotateY(0deg); opacity: 1; }
+    to{transform: translateY(-800px) rotateX(360deg)  rotateZ(360deg) rotateY(360deg)  ; opacity: 0; }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}  
+     </style>
+
+</head>
+<body>
+  
+    <div class="container">
+             <header class="head">
+                <h1 style="font-size: xxx-large;">Hello World!</h1><br>
+                <p">W3Schools background no-repeat, set position example.</p>
+                <p>Now the background image is only shown once, and positioned away from the text.</p>
+                <p>In this example we have also added a margin on the right side, so the background image will never disturb the text.</p><br>
+             </header>
+             <div class="cont">
+             <nav class="nav">
+                <ul>
+                    <li> <a class="active">Home</a> </li>
+                    <li> <a> About</a> </li> <br><br>
+            
+                </ul> 
+             </nav>
+             <main>
+                <div class="row">
+                    <div class="column side">
+                        <h2>Side</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+                     </div>
+                                        
+                    <div class="column middle">
+                        <h2>Main Content</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                                        
+                    <div class="column side">
+                        <h2>Side</h2>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p><br><br>
+                    </div>
+                </div>
+                            
+             </main>
+            </div>
+             <footer >
+                <div class="animated-area">
+                    <ul class="box-area">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>         
+                    </ul>
+                </div>
+             </footer >
+    </div>
+
+
+</body>
+</html>

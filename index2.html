@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(22, 21, 21)
+        
+        }
+        .shadow{
+            position: relative;
+            margin: 200px auto 0;
+            width:800px;
+            height: 200px;
+            border-radius: 12px;
+            background:black;
+            text-align: center;
+            padding: 15px;
+        }
+   
+        .shadow:before{
+            content: '';
+            position: absolute;    
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            background: linear-gradient(45deg,red,pink,orange,yellow,green,blue,rgb(8, 2, 95),rgb(99, 11, 55),rgb(223, 149, 192));
+            background-size: 400%;
+            z-index: -1;
+            top:-2px;
+            left: -2px;
+            border-radius: 12px;
+            background-position: 100% 0;
+            animation: animate 10s linear  infinite ;
+    
+        } 
+   
+       @keyframes animate{
+           0%{background-position: 0 0;}
+           50%{background-position: 400% 0;}
+           100%{background-position: 0 0;}
+       }
+
+       span{
+            
+            text-transform: uppercase;
+            display: block;
+            
+
+        }
+        .text1{
+           color: white;
+           font-size: 60px;
+           font-weight: 70;
+           letter-spacing: 8px;
+           margin-bottom: 20px;  
+           background-color:black;
+           position: relative;
+           animation: text 3s 1s infinite ease-in-out; 
+           
+        }
+
+        .text2{
+          font-size: 40px;
+          color: teal;
+        }
+
+        @keyframes animate{
+           0%{background-position: 0 0;}
+           50%{background-position: 400% 0;}
+           100%{background-position: 0 0;}
+       }
+
+       @keyframes text{
+           0%{color: black; margin-bottom: -40px;}
+           30%{letter-spacing: 30px; margin-bottom: -40px;}
+           100%{letter-spacing: 8px; margin-bottom: 20px;}
+       }
+
+
+       </style>
+   </head>
+   <body>
+       
+   <div class="shadow">
+    <span class="text1">hello again</span>
+    <span class="text2">CODYSKOOL</span>
+   </div>
+   
+</body>
+</html>
